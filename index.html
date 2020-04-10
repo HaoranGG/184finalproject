@@ -1,60 +1,83 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<style>  
-    div.padded {  
-      padding-top: 0px;  
-      padding-right: 100px;  
-      padding-bottom: 0.25in;  
-      padding-left: 100px;  
-    }  
-  </style> 
-<title>Your Name  |  CS 184</title>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 Final Project</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
 </head>
+
+
 <body>
-<br />
-<h1 align="middle">Assignment 3: PathTracer</h1>
-    <h2 align="middle">Your Name</h2>
 
-    <div class="padded">
-        <p>Use this section to write an overview of the assignment. All of the text in your write-up should be <em>in your own words</em>. If you need to add additional HTML features to this document, you can search the <a href="http://www.w3schools.com/">http://www.w3schools.com/</a> website for instructions. To edit the HTML, you can just copy and paste existing chunks and fill in the text and image file names appropriately.</p>
-        <o>The website writeup is intended to be a self-contained walkthrough of the assignment: we want this to be a piece of work which showcases your understanding of relevant concepts through both mesh images as well as written explanations about what you did to complete each part of the assignment. Try to be as clear and organized as possible when writing about your own output files or extensions to the assignment. We want to understand what you've achieved and how you've done it!</p> 
-        <p>If you are well-versed in web development, feel free to ditch this template and make a better looking page. Just make sure that you include all the components as we've laid them out here. </p>
+<h1 align="middle">184 Final Project Proposal - </h1>
+<h2 align="middle">Haoran Guo, Steven Cen, Philip Green</h2>
 
-    <h2 align="middle">Part 1: Ray Generation and Intersection</h2>
-        <p>Describe what you did in Part 1. etc...</p>
-        <div align="center">
-            <table style="width=100%">
-                <tr>
-                    <td align="middle">
-                    <img src="images/example_image.png" width="480px" />
-                    <figcaption align="middle">Results Caption: my bunny is the bounciest bunny</figcaption>
-                </tr>
-            </table>
-        </div>
-        <p>Here is an example of how to include a simple formula:</p>
-        <p align="middle"><pre align="middle">a^2 + b^2 = c^2</pre></p>
-        <p>or, alternatively, you can include an SVG image of a LaTex formula.</p>
-        <p>This time it's your job to copy-paste in the rest of the sections :)</p>
+<br><br>
+
+<div>
+
+<p>Our project aims to make a fluid dynamics simulation that visualizes music. We will do a 2D grid based simulation as suggested on one of the project ideas, and sync up its movement to music signals and features. </p>
+
+
+<h3>Problem</h3>
+
+
+<p>Fluid dynamics is an important branch of science that lets us study the mechanics behind situations that range from ocean waves to blood circulation. Visualization is vital to helping us understand and better describe pretty much anything, so a fluid dynamics simulation is certainly valuable. In this project we’d like to add a musical flare since we think artistic value is significant value as well. The most challenging part will probably be performing the physics calculations and creating the simulation from the results properly. We’ll be looking into the GLSL fragment shaders as mentioned and take inspiration from other fluid dynamic simulations and music visualizations online. </p>
+
+<h3>Goals and Deliverables</h3>
+<p>We will create a visualization software that will generate videos to music of the team members’ choice. This software will take basic features from music such as frequency, signal strength as inputs to equations governing fluid dynamics, particularly the parameters of the Navier-Stokes equations, and other values such as vorticity. We also should extend Navier-Stokes in creative ways, such as incorporating extra external forces (such as gravity, buoyancy) to better reflect the music input. Along the same line, we will measure the success of these outputs through the intuition of how we expect the fluid to behave given a certain song and; eg. a loud song with a fast tempo should render a clip that appears more energetic and lively. This project would require non-trivial time dealing with audio signal processing and feature extraction in music but will not be the focus in research and work time.
+</p>
+<p>We are ideally looking to make a deliverable in which users can upload music and be able to visualize it given some customizable parameters. These parameters could color palette choices. If given enough time, we could even make it so the visualizer responds to audio real time from the user’s microphone. To make the visualizer look “nicer” and more of what the team members are personally looking for, we should implement some heuristics and/or machine learning algorithms to manipulate the fluid dynamics in a specific way. We also have room to go above and beyond in thinking of extra creative extensions of Navier-Stokes beyond extra forces, as well as a deeper exploration into feature extraction .</p>
 
 
 
-    <h2 align="middle">A Few Notes On Webpages</h2>
-        <p>Here are a few problems students have encountered in the past. You will probably encounter these problems at some point, so don't wait until right before the deadline to check that everything is working. Test your website on the instructional machines early!</p>
-        <ul>
-        <li>Your main report page should be called index.html.</li>
-        <li>Be sure to include and turn in all of the other files (such as images) that are linked in your report!</li>
-        <li>Use only <em>relative</em> paths to files, such as <pre>"./images/image.jpg"</pre>
-        Do <em>NOT</em> use absolute paths, such as <pre>"/Users/student/Desktop/image.jpg"</pre></li>
-        <li>Pay close attention to your filename extensions. Remember that on UNIX systems (such as the instructional machines), capitalization matters. <pre>.png != .jpeg != .jpg != .JPG</pre>
-        <li>Be sure to adjust the permissions on your files so that they are world readable. For more information on this please see this tutorial: <a href="http://www.grymoire.com/Unix/Permissions.html">http://www.grymoire.com/Unix/Permissions.html</a></li>
-        <li>And again, test your website on the instructional machines early!</li>
-</div>
+<h3>Schedule</h3>
+<h4>Week 1:</h4>
+<p>- Read resources to learn more about fluid dynamics simulations and WebGL/other libraries and software we will need <br>
+- Begin a structured codebase for the simulation calculations and website we will present it on
+</p>
+<h4>Week 2:</h4>
+<p>- Create a basic simulation and visualize it <br>
+- Look at parameters and add ways to give the visualization variance that we can leverage into our musical visualization <br>
+- Make our simulator robust to satisfy the artistic needs
+</p>
+<h4>Week 3:</h4>
+<p>- Design and implement our extraction of signals and data from music <br>
+- Map that data to the relevant parameters for the simulation <br>
+- Attempt to do a full simulation of a music file
+</p>
+<h4>Week 4:</h4>
+<p>- Extra time for debugging <br>
+- Finalize website and rest of deliverable requirements
+</p>
+
+
+
+<h3>Resources</h3>
+<p>- Past 184 simulation projects (https://rachelbhadra.github.io/smoke_simulator/index.html#results this one seems to be one we might want to imitate in terms of graphics libraries) <br>
+- We’ll also look at papers on visualizations with Navier-Stokes <br> 
+https://www5.in.tum.de/pub/bartels_idp_14.pdf <br>
+Stable Fluids - Jos Stam https://d2f99xq7vri1nk.cloudfront.net/legacy_app_files/pdf/ns.pdf<br>
+- We hope to be able to complete the project on our personal computers, and hope to run the interactive product of the project in the browser <br>
+- WebGL seems to be a good library for us to use to make our visualization easily accessible in a web format<br>
+- We will also look at extracting features for music visualization<br>
+https://www.cg.tuwien.ac.at/c
+</p>
+
+
 </body>
 </html>
-
-
-
-
